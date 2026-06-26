@@ -1,5 +1,5 @@
 :root {
-  --bg: #f3f7f3;
+  --bg: #faf9f6;
   --surface: #ffffff;
   --text: #1c2a22;
   --text-muted: #8a9b90;
@@ -28,8 +28,7 @@ body {
 }
 
 body {
-  background: linear-gradient(180deg, #f3f7f3 0%, #eef5f0 100%);
-  background-attachment: fixed;
+  background: var(--bg);
   color: var(--text);
   font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN",
     "Hiragino Sans", "Noto Sans JP", "Yu Gothic", "Meiryo", sans-serif;
