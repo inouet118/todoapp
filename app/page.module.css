@@ -1,0 +1,369 @@
+.main {
+  display: flex;
+  justify-content: center;
+  padding: 64px 20px 120px;
+}
+
+.container {
+  width: 100%;
+  max-width: 480px;
+}
+
+.header {
+  margin-bottom: 24px;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.subtitle {
+  margin-top: 4px;
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+/* 完了率グラフ */
+.progressCard {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 18px 20px;
+  margin-bottom: 24px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: 0 4px 16px rgba(47, 158, 111, 0.06);
+}
+
+.donut {
+  width: 72px;
+  height: 72px;
+  flex-shrink: 0;
+}
+
+.donutTrack {
+  stroke: var(--accent-soft);
+  stroke-width: 8;
+}
+
+.donutValue {
+  stroke: var(--accent);
+  stroke-width: 8;
+  stroke-linecap: round;
+  transition: stroke-dasharray 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.donutText {
+  font-size: 18px;
+  font-weight: 600;
+  fill: var(--text);
+  text-anchor: middle;
+  dominant-baseline: central;
+}
+
+.progressInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.progressLabel {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.progressCount {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--accent-dark);
+}
+
+/* 入力フォーム */
+.form {
+  margin-bottom: 20px;
+}
+
+.inputRow {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.input {
+  flex: 1;
+  padding: 14px 16px;
+  font-size: 15px;
+  font-family: inherit;
+  color: var(--text);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.input::placeholder {
+  color: var(--text-muted);
+}
+
+.input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(47, 158, 111, 0.12);
+}
+
+.addButton {
+  flex-shrink: 0;
+  width: 52px;
+  font-size: 22px;
+  color: #fff;
+  background: var(--accent);
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.addButton:hover {
+  background: var(--accent-dark);
+}
+
+.addButton:active {
+  transform: scale(0.96);
+}
+
+.addButton:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+/* 入力オプション（優先度・カテゴリ・締め切り） */
+.optionRow {
+  display: flex;
+  gap: 8px;
+}
+
+.select {
+  flex: 1;
+  min-width: 0;
+  padding: 10px 12px;
+  font-size: 13px;
+  font-family: inherit;
+  color: var(--text);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  outline: none;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.select:focus {
+  border-color: var(--accent);
+}
+
+/* フィルター */
+.filterBar {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.filterSelect {
+  flex: 1;
+  min-width: 0;
+  padding: 9px 12px;
+  font-size: 13px;
+  font-family: inherit;
+  color: var(--text);
+  background: var(--accent-soft);
+  border: 1px solid transparent;
+  border-radius: 10px;
+  outline: none;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.filterSelect:focus {
+  border-color: var(--accent);
+}
+
+/* リスト */
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  animation: slideIn 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  transition: opacity 0.3s ease, background 0.3s ease;
+}
+
+.itemDone {
+  background: #fafdfb;
+}
+
+.checkbox {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  margin-top: 1px;
+  border: 1.5px solid #c2d6c9;
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.checkbox:hover {
+  border-color: var(--accent);
+}
+
+.checkboxChecked {
+  background: var(--accent);
+  border-color: var(--accent);
+  animation: pop 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.checkmark {
+  color: #fff;
+  font-size: 13px;
+  line-height: 1;
+}
+
+.body {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.text {
+  font-size: 15px;
+  word-break: break-word;
+  transition: color 0.2s ease;
+}
+
+.textDone {
+  color: var(--text-muted);
+  text-decoration: line-through;
+}
+
+/* メタ情報（タグ） */
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 9px;
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--text-muted);
+  background: var(--accent-soft);
+  border-radius: 999px;
+}
+
+.priTag {
+  color: #fff;
+}
+
+.priTag[data-priority="high"] {
+  background: var(--pri-high);
+}
+
+.priTag[data-priority="medium"] {
+  background: var(--pri-medium);
+}
+
+.priTag[data-priority="low"] {
+  background: var(--pri-low);
+}
+
+.dueTag {
+  background: #eef2f0;
+  color: #5f7268;
+}
+
+.dueOverdue {
+  background: rgba(224, 97, 85, 0.12);
+  color: var(--danger);
+}
+
+.deleteButton {
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  font-size: 18px;
+  color: var(--text-muted);
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  opacity: 0;
+  transition: all 0.2s ease;
+}
+
+.item:hover .deleteButton {
+  opacity: 1;
+}
+
+.deleteButton:hover {
+  color: var(--danger);
+  background: rgba(224, 97, 85, 0.08);
+}
+
+/* 空の状態 */
+.empty {
+  text-align: center;
+  padding: 56px 0;
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(0.6);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* タッチ端末では削除ボタンを常に表示 */
+@media (hover: none) {
+  .deleteButton {
+    opacity: 1;
+  }
+}

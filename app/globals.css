@@ -1,0 +1,44 @@
+:root {
+  --bg: #f3f7f3;
+  --surface: #ffffff;
+  --text: #1c2a22;
+  --text-muted: #8a9b90;
+  --border: #e4ede6;
+  --accent: #2f9e6f;
+  --accent-dark: #248257;
+  --accent-soft: #e6f4ec;
+  --danger: #e06155;
+  --radius: 14px;
+
+  /* 優先度カラー */
+  --pri-high: #e06155;
+  --pri-medium: #e0a23a;
+  --pri-low: #5aa7d6;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  background: linear-gradient(180deg, #f3f7f3 0%, #eef5f0 100%);
+  background-attachment: fixed;
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans", "Noto Sans JP", "Yu Gothic", "Meiryo", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+}
+
+::selection {
+  background: var(--accent);
+  color: #fff;
+}
